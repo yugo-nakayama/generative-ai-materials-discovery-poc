@@ -7,15 +7,14 @@ search_criteria:
     - "Li"  # リチウム含有
   num_elements_min: 2
   num_elements_max: 5
-  exclude_elements: []  # 除外したい元素があれば追加
+  exclude_elements: []
 
 # フィルタリング条件
 filters:
   energy_above_hull_max: 0.1  # 安定性（eV/atom）
-  min_conductivity: null  # 伝導度データがあれば設定
 
 # 取得件数
-max_results: 5000
+max_results: 1000
 
 # 出力先
 output_path: "data/raw/mp_battery_materials.json"
