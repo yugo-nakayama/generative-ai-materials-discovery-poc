@@ -47,3 +47,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     main(args.output, args.max_results)
+
+# 1. データ取得（APIキー設定済み前提）
+# python scripts/01_download_mp.py --output data/raw/mp_battery_materials.json --max-results 1000
+
