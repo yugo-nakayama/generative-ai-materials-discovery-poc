@@ -1,0 +1,24 @@
+# 生成モデル学習設定
+
+model:
+  type: "vae"  # vae or diffusion
+  latent_dim: 256
+  encoder_layers: [512, 256]
+  decoder_layers: [256, 512]
+  
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  early_stopping_patience: 10
+  
+data:
+  train_data: "data/processed/train.json"
+  test_data: "data/processed/test.json"
+  max_atoms: 50  # 最大原子数
+  
+output:
+  model_dir: "models/generator"
+  checkpoint_every: 10
+  
+device: "cuda"  # cuda or cpu
